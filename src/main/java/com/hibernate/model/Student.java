@@ -6,10 +6,12 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-@Entity(name = "etudiant")
+@Entity
 public class Student {
-	@Id
+	@Id // clé primaire
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	// identity = auto increment 1,2,3...
+	// auto pour uniquement les chaine chaine aléatoire automatique
 	private long id;
 	@Column(nullable = false, length = 30)
 	private String nom,prenom;
